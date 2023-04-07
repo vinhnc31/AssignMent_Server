@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col" style="text-align: center;margin-top: 75px;">
+            <img src="https://bizweb.dktcdn.net/100/393/859/themes/783522/assets/logo.png?1670239397822" alt="fail">
+        </div>
+        <div class="col">
+            <div class="container" style="height: 450px;margin-top: 50px">
+                <h2 style="text-align: center;font-size: 50px;">LOGIN</h2>
+                <form method="POST" action="/login" autocomplete="off">
+                    <div class="form-group">
+                        <label for="ten">UserName</label>
+                        <input type="text" class="form-control" name="ten" required placeholder="Enter Username : ">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" required
+                            placeholder="Enter Password : ">
+                    </div>
+                    <div class="mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="cb1" name="" />
+                            <label for="cb1" class="custom-control-label">Lưu mật khẩu</label>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <a href="#" class="forget-link">Quên Mật Khẩu</a>
+                    </div>
+                    <div class="mb-6">
+                        <button type="submit" class="btn btn-block text-uppercase btn-primary" style="margin-top: 5px;">
+                            Đăng nhập
+                        </button>
+
+                    </div>
+                    <div class="text-center">
+                        Bạn chưa có tài khoản ?<a href="/signup" class="register-link">
+                            Đăng Kí</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

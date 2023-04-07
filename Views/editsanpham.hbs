@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 style="text-align: center;margin-top: 20px;font-size: 50px;">{{title}}</h2>
+  <form method="POST" action="/sanpham/{{sanphams._id}}?_method=PUT" autocomplete="off">
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="text" class="form-control"  value="{{sanphams.image}}" name="image" required>
+    </div>
+    <div class="form-group">
+      <label for="ten">Tên:</label>
+      <input type="text" class="form-control" value="{{sanphams.ten}}" name="ten" required>
+    </div>
+    <div class="form-group">
+      <label for="gia">Giá:</label>
+      <input type="text" class="form-control" value="{{sanphams.gia}}" name="gia" required>
+    </div>
+    <div class="form-group">
+      <label for="mota">Mô Tả:</label>
+      <textarea class="form-control" name="mota" > {{sanphams.mota}} </textarea>
+    </div>
+    <button type="submit" class="btn btn-block text-uppercase btn-primary">Submit</button>
+  </form>
+</div>
