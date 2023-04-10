@@ -22,7 +22,7 @@ class Signupcontroller {
           email: req.body.email,
           username: req.body.username,
           password: hashedPass,
-          image: req.file.filename,
+          image: req.file.path,
         });
         if (validator.validate("test@email.com")) {
           user
@@ -44,7 +44,7 @@ class Signupcontroller {
     var password = req.body.password;
 
     userModel
-      .findOne({ $or: [{ email: username, password: username }] })
+      .findOne({email: username, password: password})
       .then((user) => {
         if (user) {
           bcrypt.compare(password, user.password, (err, result) => {
@@ -53,7 +53,7 @@ class Signupcontroller {
             }
             if (result) {
               let token = jwt.sign(
-                { username: userModel.name },
+                { username: userModel.username },
                 "verySecretValue",
                 { expiresIn: "1h" }
               );

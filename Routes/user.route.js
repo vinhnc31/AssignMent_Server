@@ -20,6 +20,6 @@ route.get('/adduser',userController.index);
 route.get('/listuser',userController.show);
 route.get('/:id/edit',userController.edit);
 route.post("/adduser",upload.single('file'),userController.add);
-route.put('/:id',userController.update);
+route.put('/:id',upload.single('file'),userController.update);
 route.delete("/:id",userController.delete);
 module.exports = route;

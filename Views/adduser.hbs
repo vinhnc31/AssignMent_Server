@@ -2,8 +2,10 @@
     <h2 style="text-align: center;font-size: 50px;">Thêm User</h2>
     <form method="POST" action="/user/adduser" autocomplete="off" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="file">Avata</label>
-            <input type="file" name="file" class="form-control-file border" />
+            <label style="width: 200px;" class="text-center">
+                <input type="file" style="display: none;" name="file" class="form-control-file border" />
+                <img src="https://i.pinimg.com/originals/89/e3/28/89e3283963b7b346b3bc98e246c98515.jpg" alt="fail" class="img-thumbnail">
+            </label> 
         </div>
         <div class="form-group">
             <label for="email">Email</label>

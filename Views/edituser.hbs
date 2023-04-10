@@ -1,9 +1,12 @@
 <div class="container">
     <h2 style="text-align: center;font-size: 50px;">Update User</h2>
     <form method="POST" action="/user/{{user._id}}?_method=PUT" autocomplete="off" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="file">Avata</label>
-            <input type="file" value="{{user.file}}" name="file"  class="form-control-file border" />
+         <div class="form-group">
+            <label style="width: 200px;" class="text-center">
+                <input type="file" style="display: none;" name="file" class="form-control-file border" />
+                <img src="../{{user.image}}" alt="fail" class="img-thumbnail">
+            </label>
+            
         </div>
         <div class="form-group">
             <label for="email">Email</label>
